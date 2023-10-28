@@ -122,7 +122,7 @@ header {
 
 .content {
     display: flex;
-    padding: 140px 0;
+    padding: 40px 0;
     gap: 32px;
     flex-direction: column;
 }
@@ -173,6 +173,7 @@ header {
     gap: 84px;
     flex-direction: row;
     align-items: center;
+    padding-top: 80px;
 }
 
 #visi .container .content .text {
@@ -193,8 +194,8 @@ header {
 #misi .container .content {
     display: flex;
     align-items: center;
-    gap: 20px;
-    flex-direction: row;
+    gap: 36px;
+    flex-direction: column;
 }
 
 #misi .container .content .main {
@@ -226,13 +227,20 @@ header {
     align-self: stretch;
 }
 
-#misi .container .content .main .row .body {
+#misi .container .content .main .row .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+#misi .container .content .main .row .col .body {
     display: flex;
     align-items: flex-start;
     gap: 16px;
 }
 
-#misi .container .content .main .row .body p {
+#misi .container .content .main .row .col .body p {
     color: #000;
     font-size: 18px;
     font-style: normal;
@@ -258,7 +266,7 @@ header {
     line-height: normal;
 } */
 
-#misi .container .content .main .row .body p.number {
+#misi .container .content .main .row .col .body p.number {
     display: inline-flex;
     padding: 6px 24px;
     flex-direction: column;
@@ -279,5 +287,64 @@ header {
 
 #struktur {
     display: flex;
+}
+
+#struktur .container {
     justify-content: center;
+}
+
+#struktur .container .content h1.header {
+    color: #000;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#kegiatan {
+    display: flex;
+}
+
+#kegiatan .container {
+    justify-content: center;
+}
+
+#kegiatan .container .content h1.header {
+    color: #000;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#berita {
+    display: flex;
+}
+
+#berita .container {
+    justify-content: center;
+}
+
+#berita .container .content h1.header {
+    color: #000;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#galeri {
+    display: flex;
+}
+
+#galeri .container {
+    justify-content: center;
+}
+
+#galeri .container .content h1.header {
+    color: #000;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
