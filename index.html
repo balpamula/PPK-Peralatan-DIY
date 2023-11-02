@@ -4,9 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PPK Peralatan DIY</title>
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -127,11 +132,64 @@
         </section>
         <section id="kegiatan">
             <div class="container">
-                <div class="content">
-                    <h1 class="header">KEGIATAN</h1>
+                <h1 class="header">KEGIATAN</h1>
+                <div class="owl-carousel">
+                    <div class="slider-card">
+                        <div class="card">
+                            <img src="assets/img/gambar-card.png">
+                            <p class="card-title">
+                                1 PPK melakukan perencanaan
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slider-card">
+                        <div class="card">
+                            <img src="assets/img/gambar-card.png">
+                            <p class="card-title">
+                                2 PPK melakukan perencanaan
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slider-card">
+                        <div class="card">
+                            <img src="assets/img/gambar-card.png">
+                            <p class="card-title">
+                                3 PPK melakukan perencanaan
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slider-card">
+                        <div class="card">
+                            <img src="assets/img/gambar-card.png">
+                            <p class="card-title">
+                                4 PPK melakukan perencanaan
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slider-card">
+                        <div class="card">
+                            <img src="assets/img/gambar-card.png">
+                            <p class="card-title">
+                                5 PPK melakukan perencanaan
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slider-card">
+                        <div class="card">
+                            <img src="assets/img/gambar-card.png">
+                            <p class="card-title">
+                                6 PPK melakukan perencanaan
+                            </p>
+                        </div>
+                    </div>
                 </div>
+                <!-- <div class="content">
+                    <h1 class="header">KEGIATAN</h1>
+
+                </div> -->
             </div>
         </section>
+
         <section id="berita">
             <div class="container">
                 <div class="content">
@@ -155,5 +213,64 @@
         </section>
     </main>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var header = $("header");
+
+        // Ketika dokumen dimuat, periksa posisi pengguliran awal
+        checkHeaderBackground();
+
+        // Memonitor peristiwa pengguliran
+        $(window).scroll(function () {
+            checkHeaderBackground();
+        });
+
+        // Fungsi untuk memeriksa dan mengubah latar belakang header
+        function checkHeaderBackground() {
+            if ($(window).scrollTop() > 0) {
+                header.css({
+                    'background': 'rgba(44, 43, 43, 0.75)', // Ganti dengan warna latar belakang yang Anda inginkan
+                    'border-bottom': '1px solid #FFC632'
+                });
+            } else {
+                header.css({
+                    'background': 'transparent',
+                    'border-bottom': 'px solid #FFC632'
+                });
+            }
+        }
+    });
+
+    $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            center: true,
+            navText: [
+                "<i class='fas fa-arrow-left'></i>",
+                "<i class='fas fa-arrow-right'></i>"
+            ],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });
+    });
+</script>
+
 
 </html>
