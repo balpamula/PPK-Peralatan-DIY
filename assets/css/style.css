@@ -91,6 +91,8 @@ header {
 
     border-radius: 4px;
     border: 1px solid var(--primary);
+
+    transition: background 0.3s ease-in-out;
 }
 
 .navbar-button .kontak {
@@ -102,6 +104,8 @@ header {
     border-radius: 4px;
     background: var(--secondary);
     border: 1px solid transparent;
+
+    transition: background 0.3s ease-in-out;
 }
 
 .navbar-brand {
@@ -158,7 +162,7 @@ header {
     display: flex;
     padding: 16px 32px;
     gap: 8px;
-    color: black;
+    color: #2C2B2B;
 
     border-radius: 4px;
     background: var(--primary);
@@ -393,9 +397,10 @@ h1.header {
 
 .owl-nav {
     display: flex;
-    justify-content: center;
+    justify-content: end;
     gap: 16px;
     flex-direction: row;
+    padding: 0 30px;
 }
 
 .owl-nav .owl-prev {
@@ -407,17 +412,17 @@ h1.header {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 3px solid #000 !important;
-    color: #000;
+    border: 3px solid #d1d1d1 !important;
+    color: #d1d1d1 !important;
 
     font-size: 30px !important;
 
-    opacity: 0.35;
-    transition: opacity 0.2s ease-in-out
+    transition: color 0.2s ease-in-out, border 0.2s ease-in-out;
 }
 
 .owl-nav .owl-prev:hover {
-    opacity: 1;
+    color: var(--primary) !important;
+    border: 3px solid var(--primary) !important;
 }
 
 .owl-nav .owl-next {
@@ -429,17 +434,16 @@ h1.header {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 3px solid #000 !important;
-    color: #000;
+    border: 3px solid #d1d1d1 !important;
+    color: #d1d1d1 !important;
 
     font-size: 30px !important;
-
-    opacity: 0.35;
-    transition: opacity 0.2s ease-in-out
+    transition: color 0.2s ease-in-out, border 0.2s ease-in-out;
 }
 
 .owl-nav .owl-next:hover {
-    opacity: 1;
+    color: var(--primary) !important;
+    border: 3px solid var(--primary) !important;
 }
 
 .owl-dots {
@@ -613,4 +617,175 @@ h1.header {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+}
+
+#pengaduan {
+    display: flex;
+    justify-content: center;
+}
+
+#pengaduan .container {
+    margin: 40px 0px;
+    justify-content: center;
+    background-image: url("../img/CTA.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#pengaduan .content {
+    padding: 115px 0;
+    align-items: center;
+}
+
+#pengaduan .main-content {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-direction: column;
+}
+
+#pengaduan .container .content h1.header {
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+#pengaduan .container .content p.text {
+    display: flex;
+    width: 458px;
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#pengaduan .button {
+    color: #2C2B2B;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+footer {
+    margin-top: 40px;
+}
+
+footer .footer {
+    background-color: var(--primary);
+}
+
+footer .second-footer {
+    background-color: #000;
+}
+
+footer .second-footer .content {
+    padding: 0;
+}
+
+footer .second-footer .container {
+    padding: 10px 80px;
+}
+
+footer .second-footer ul {
+    display: flex;
+    align-items: flex-start;
+    gap: 43px;
+}
+
+footer .second-footer li {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+
+    list-style: none;
+}
+
+footer .second-footer p {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+footer .content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 143px;
+    flex-direction: row;
+}
+
+footer .main-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+footer .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    flex: 1 0 0;
+}
+
+footer .contact h1 {
+    color: #2C2B2B;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+footer .contact p {
+    align-self: stretch;
+
+    color: #2C2B2B;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+footer .post {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 29px;
+}
+
+footer .post h1 {
+    color: #2C2B2B;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+footer .post ul {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+
+footer .post li {
+    color: #2C2B2B;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+
+    list-style: none;
 }

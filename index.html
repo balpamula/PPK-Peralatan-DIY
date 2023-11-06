@@ -185,7 +185,6 @@
                 </div>
             </div>
         </section>
-
         <section id="berita">
             <div class="container">
                 <div class="content">
@@ -304,71 +303,78 @@
         <section id="pengaduan">
             <div class="container">
                 <div class="content">
-                    <h1 class="header">Sampaikan Keluhan Anda disini</h1>
-
+                    <div class="main-content">
+                        <h1 class="header">Sampaikan Keluhan Anda disini</h1>
+                        <p class="text">Apabila ada saran dan masukan Sampaikan Pendapat Anda. Komentar dan Saran Selalu
+                            Kami Dengar.</p>
+                    </div>
+                    <a href="" class="button">Halaman Pengaduan</a>
                 </div>
             </div>
         </section>
     </main>
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="content">
+                    <div class="contact">
+                        <h1>PPK Pelaksanaan Peralatan DIY</h1>
+                        <p>Jl. Tanjungtirto, Jrebesan, Kalitirto, Kec. Berbah, Kabupaten Sleman, Daerah Istimewa
+                            Yogyakarta 55573
+                        </p>
+                        <p>Telp: (0274) 496003</p>
+                    </div>
+                    <div class="main-content">
+                        <div class="post">
+                            <h1>Our Post</h1>
+                            <ul>
+                                <li>How it works</li>
+                                <li>About us</li>
+                                <li>Decline rules</li>
+                                <li>Terms & Conditions</li>
+                            </ul>
+                        </div>
+                        <div class="post">
+                            <h1>Our Post</h1>
+                            <ul>
+                                <li>Connected</li>
+                                <li>About us</li>
+                                <li>Decline rules</li>
+                                <li>Terms & Conditions</li>
+                            </ul>
+                        </div>
+                        <div class="post">
+                            <h1>Our Post</h1>
+                            <ul>
+                                <li>How it works</li>
+                                <li>About us</li>
+                                <li>Decline rules</li>
+                                <li>Terms & Conditions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="second-footer">
+            <div class="container">
+                <div class="content">
+                    <ul>
+                        <li>Blogs</li>
+                        <li>Gallery</li>
+                        <li>Discalimer</li>
+                        <li>About</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <p>© Company all rights reserved</p>
+            </div>
+        </div>
+    </footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="assets/js/owl.carousel.min.js"></script>
-<script>
-    $(document).ready(function () {
-        var header = $("header");
-
-        // Ketika dokumen dimuat, periksa posisi pengguliran awal
-        checkHeaderBackground();
-
-        // Memonitor peristiwa pengguliran
-        $(window).scroll(function () {
-            checkHeaderBackground();
-        });
-
-        // Fungsi untuk memeriksa dan mengubah latar belakang header
-        function checkHeaderBackground() {
-            if ($(window).scrollTop() > 0) {
-                header.css({
-                    'background': 'rgba(44, 43, 43, 0.75)', // Ganti dengan warna latar belakang yang Anda inginkan
-                    'border-bottom': '1px solid #FFC632'
-                });
-            } else {
-                header.css({
-                    'background': 'transparent',
-                    'border-bottom': 'px solid #FFC632'
-                });
-            }
-        }
-    });
-
-    $(document).ready(function () {
-        $(".owl-carousel").owlCarousel({
-            loop: true,
-            margin: 10,
-            nav: true,
-            dots: false,
-            autoplay: true,
-            autoplayTimeout: 3000,
-            autoplayHoverPause: true,
-            center: true,
-            navText: [
-                "<i class='fas fa-arrow-left'></i>",
-                "<i class='fas fa-arrow-right'></i>"
-            ],
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 1
-                },
-                1000: {
-                    items: 3
-                }
-            }
-        });
-    });
-</script>
+<script src="assets/js/script.js"></script>
 
 
 </html>
