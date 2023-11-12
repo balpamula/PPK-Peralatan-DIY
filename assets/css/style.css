@@ -83,19 +83,7 @@ header {
     gap: 20px;
 }
 
-.navbar-button .pengajuan {
-    display: flex;
-    padding: 8px;
-    gap: 8px;
-    color: white;
-
-    border-radius: 4px;
-    border: 1px solid var(--primary);
-
-    transition: background 0.3s ease-in-out;
-}
-
-.navbar-button .kontak {
+.navbar-button .button {
     display: flex;
     padding: 8px;
     gap: 8px;
@@ -106,6 +94,33 @@ header {
     border: 1px solid transparent;
 
     transition: background 0.3s ease-in-out;
+}
+
+.navbar-button .button:hover {
+    color: black;
+
+    background: var(--primary);
+    border: 1px solid transparent;
+}
+
+.navbar-button .button.scrolled {
+    display: flex;
+    padding: 8px;
+    gap: 8px;
+    color: black;
+
+    border-radius: 4px;
+    background: var(--primary);
+    border: 1px solid transparent;
+
+    transition: background 0.3s ease-in-out;
+}
+
+.navbar-button .button.scrolled:hover {
+    color: black;
+
+    background: #ffd876;
+    border: 1px solid transparent;
 }
 
 .navbar-brand {
@@ -292,6 +307,11 @@ h1.header {
     line-height: normal;
 }
 
+#struktur img {
+    max-width: 1280px;
+    height: auto;
+}
+
 #kegiatan {
     display: flex;
 }
@@ -340,7 +360,7 @@ h1.header {
     display: flex;
     flex-direction: column;
     flex: 0 0 100%;
-    padding: 16px;
+    padding: 8px;
     background: white;
     border-radius: 12px;
     transition: all 0.2s;

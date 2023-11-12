@@ -1,7 +1,6 @@
 $(document).ready(function () {
     var header = $("header");
-    var navbarButtonKontak = $(".navbar-button .kontak");
-    var navbarButtonPengajuan = $(".navbar-button .pengajuan");
+    var button = $(".navbar-button .button");
 
     // Ketika dokumen dimuat, periksa posisi pengguliran awal
     checkHeaderBackground();
@@ -18,30 +17,17 @@ $(document).ready(function () {
                 'background': '#01037C', // Ganti dengan warna latar belakang yang Anda inginkan
                 'border-bottom': '2px solid #FFC632'
             });
-            navbarButtonKontak.css({
-                'background': 'var(--primary)',
-                'color': 'black'
-            });
-            navbarButtonPengajuan.css({
-                'background': 'var(--primary)',
-                'color': 'black'
-            });
+            button.addClass('scrolled');
         } else {
             header.css({
                 'background': 'transparent',
                 'border-bottom': '2px solid #FFC632'
             });
-            navbarButtonKontak.css({
-                'background': 'var(--secondary)',
-                'color': 'white'
-            });
-            navbarButtonPengajuan.css({
-                'background': 'transparent',
-                'color': 'white'
-            });
+            button.removeClass('scrolled');
         }
     }
 });
+
 
 $(document).ready(function () {
     $(".owl-carousel").owlCarousel({
