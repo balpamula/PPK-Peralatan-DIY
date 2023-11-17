@@ -35,6 +35,10 @@ body {
     font-weight: 700;
 }
 
+.header {
+    font-size: 46px !important;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -54,10 +58,26 @@ header {
 
 .container {
     display: flex;
-    width: 1440px;
+    max-width: 1440px;
     padding: 0 80px;
     margin-right: auto;
     margin-left: auto;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+header .container {
+    display: flex;
+    gap: 28px;
+
+}
+
+.navbar {
+    display: flex;
+    flex: 1 0 0;
+    max-width: 790.5px;
     justify-content: space-between;
     align-items: center;
 }
@@ -96,6 +116,10 @@ header {
     transition: background 0.3s ease-in-out;
 }
 
+.navbar-hamburger {
+    display: none;
+}
+
 .navbar-button .button:hover {
     color: black;
 
@@ -123,6 +147,10 @@ header {
     border: 1px solid transparent;
 }
 
+.navbar-hamburger-button {
+    display: none;
+}
+
 .navbar-brand {
     display: flex;
     align-items: center;
@@ -136,8 +164,10 @@ header {
 
 #top {
     background-image: url("../img/gambar1.png");
-    background-repeat: no-repeat;
+    /* background-color: darkgray; */
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .content {
@@ -190,9 +220,10 @@ h1.header {
 #tautan-terkait {
     background-color: #2C2B2B;
     padding: 32px 0px;
+    display: flex;
 }
 
-#visi .container .content {
+#visi .content {
     display: flex;
     gap: 84px;
     flex-direction: row;
@@ -200,71 +231,21 @@ h1.header {
     padding-top: 80px;
 }
 
-#visi .container .content .text {
+#visi .text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
 }
 
-#visi .container .content .text p.header {
+#visi .header {
     color: #000;
-    font-size: 46px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 
-#misi .container .content {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    flex-direction: column;
-}
-
-#misi .container .content .main {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-}
-
-#misi .container .content .main hr {
-    height: 1px;
-    width: 100%;
-    background: #8F8686;
-}
-
-#misi .container .content p.header {
-    color: #000;
-    font-family: Poppins;
-    font-size: 46px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-
-#misi .container .content .main .row {
-    display: flex;
-    align-items: flex-start;
-    gap: 66px;
-    align-self: stretch;
-}
-
-#misi .container .content .main .row .col {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-}
-
-#misi .container .content .main .row .col .body {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-}
-
-#misi .container .content .main .row .col .body p {
+#visi p {
     color: #000;
     font-size: 18px;
     font-style: normal;
@@ -272,7 +253,62 @@ h1.header {
     line-height: normal;
 }
 
-#misi .container .content .main .row .col .body p.number {
+#misi .content {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-direction: column;
+}
+
+#misi .main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+#misi hr {
+    height: 1px;
+    width: 100%;
+    background: #8F8686;
+}
+
+#misi p.header {
+    color: #000;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#misi .row {
+    display: flex;
+    align-items: flex-start;
+    gap: 66px;
+    align-self: stretch;
+}
+
+#misi .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+#misi .body {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+#misi p {
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#misi p.number {
     display: inline-flex;
     padding: 6px 24px;
     flex-direction: column;
@@ -299,16 +335,15 @@ h1.header {
     justify-content: center;
 }
 
-#struktur .container .content h1.header {
+#struktur h1.header {
     color: #000;
-    font-size: 46px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 
 #struktur img {
-    max-width: 1280px;
+    width: 100%;
     height: auto;
 }
 
@@ -322,9 +357,8 @@ h1.header {
     flex-direction: column;
 }
 
-#kegiatan .container h1.header {
+#kegiatan h1.header {
     color: #000;
-    font-size: 46px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -356,6 +390,10 @@ h1.header {
     align-items: center;
 }
 
+.owl-carousel .owl-loaded .owl-drag {
+    max-width: 1440px;
+}
+
 .card {
     display: flex;
     flex-direction: column;
@@ -366,7 +404,6 @@ h1.header {
     transition: all 0.2s;
     flex-basis: auto;
     gap: 16px;
-    margin: 0 12px;
     cursor: pointer;
 
     overflow-wrap: break-word;
@@ -407,6 +444,11 @@ h1.header {
     line-height: normal;
 
     align-self: stretch;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
 }
 
 .owl-carousel.owl-loaded {
@@ -494,43 +536,43 @@ h1.header {
     justify-content: center;
 }
 
-#berita .container .content {
+#berita .content {
     display: flex;
     align-items: center;
     gap: 24px;
     flex-direction: column;
 }
 
-#berita .container .content h1.header {
+#berita h1.header {
     color: #000;
-    font-size: 46px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 
-#berita .container .content .main {
-    display: flex;
-    align-items: flex-start;
-    gap: 105px;
+#berita .main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(350px, 630px));
+    column-gap: 20px;
+    row-gap: 20px;
+    justify-content: center;
 }
 
-#berita .container .content .main p.left {
+#berita p.left {
     color: #000;
-    font-family: Poppins;
     font-size: 32px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 
     display: flex;
-    width: 583px !important;
     flex-direction: column;
     justify-content: center;
-    align-self: stretch;
+    align-self: self-start;
 }
 
-#berita .container .content .main .right {
+#berita .right {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -538,18 +580,15 @@ h1.header {
     align-self: stretch;
 }
 
-#berita .container .content .main .right p.text {
+#berita .right p.text {
     color: #000;
-    font-family: Poppins;
     font-size: 16px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 140%;
-
-    width: 589px;
 }
 
-#berita .container .content .main .right .button {
+#berita .right .button {
     color: #2C2B2B;
     font-family: Poppins;
     font-size: 16px;
@@ -558,22 +597,17 @@ h1.header {
     line-height: normal;
 }
 
-#berita .container .content .main-content {
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-#berita .container .content .main-content .row {
-    display: flex;
+#berita .main-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 408px));
+    row-gap: 20px;
+    column-gap: 20px;
     justify-content: center;
-    align-self: stretch;
-    gap: 20px;
-    align-items: flex-start;
+    justify-items: center;
 }
 
-#berita .container .content .main-content .row .card {
+#berita .card {
     display: flex;
     flex-direction: column;
     flex: 0 0 100%;
@@ -586,10 +620,9 @@ h1.header {
     cursor: pointer;
 
     box-shadow: -1px 2px 16px 0px rgba(0, 0, 0, 0.03);
-    max-width: 412px;
 }
 
-#berita .container .content .main-content .row .card img {
+#berita .card img {
     max-width: auto;
     height: 270px;
     object-fit: cover;
@@ -605,15 +638,14 @@ h1.header {
     justify-content: center;
 }
 
-#galeri .container .content h1.header {
+#galeri h1.header {
     color: #000;
-    font-size: 46px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 
-#galeri .container .content .main-content {
+#galeri .main-content {
     display: inline-flex;
     flex-direction: column;
     align-items: flex-end;
@@ -622,17 +654,17 @@ h1.header {
     overflow: hidden;
 }
 
-#galeri .container .content .main-content img {
+#galeri img {
     object-fit: cover;
 }
 
-#galeri .container .content .main-content .row {
+#galeri .row {
     display: flex;
     align-items: flex-start;
     gap: 20px;
 }
 
-#galeri .container .content .main-content .row .inside-row {
+#galeri .inside-row {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -646,10 +678,12 @@ h1.header {
 
 #pengaduan .container {
     margin: 40px 0px;
+    width: 1440px;
     justify-content: center;
     background-image: url("../img/CTA.png");
     background-position: center;
     background-repeat: no-repeat;
+    /* background-color: #2C2B2B; */
 }
 
 #pengaduan .content {
@@ -664,20 +698,17 @@ h1.header {
     flex-direction: column;
 }
 
-#pengaduan .container .content h1.header {
+#pengaduan h1.header {
     color: #FFF;
     text-align: center;
-    font-family: Poppins;
-    font-size: 46px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
     text-transform: uppercase;
 }
 
-#pengaduan .container .content p.text {
+#pengaduan p.text {
     display: flex;
-    width: 458px;
     color: #FFF;
     text-align: center;
     font-size: 18px;
@@ -742,7 +773,7 @@ footer .content {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 143px;
+    /* gap: 143px; */
     flex-direction: row;
 }
 
@@ -808,4 +839,314 @@ footer .post li {
     line-height: 150%;
 
     list-style: none;
+}
+
+@media screen and (max-width: 1080px) {
+    .navbar-hamburger-button {
+        display: inline-block;
+    }
+
+    #menuBtn {
+        color: var(--primary);
+    }
+
+    .navbar {
+        justify-content: end;
+        gap: 32px;
+    }
+
+    .navbar-button {
+        display: none;
+
+        flex-direction: column;
+        align-items: flex-end;
+        place-content: flex-end space-around;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: -1;
+        gap: 12px;
+        padding: 12px 80px;
+        background-color: var(--secondary);
+
+        border-bottom: 2px solid #FFC632;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 1024px;
+        padding: 0 40px;
+    }
+
+    .content .home-header {
+        font-size: calc(68px * 0.86);
+    }
+
+    .content .home-small {
+        font-size: calc(28px * 0.86);
+    }
+
+    .header {
+        font-size: calc(46px * 0.86) !important;
+    }
+
+    .navbar-button {
+        padding: 12px 40px;
+    }
+
+    #visi img {
+        max-width: 447px;
+    }
+
+    #berita p.left {
+        font-size: calc(32px * 0.92);
+    }
+
+    footer .second-footer .container {
+        padding: 10px 40px;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    header {
+        background-color: var(--secondary);
+    }
+
+    .navbar-hamburger {
+        display: inline-block;
+    }
+
+    #menu {
+        display: inline-block;
+        color: var(--primary);
+    }
+
+    .navbar-hamburger-button {
+        display: none;
+    }
+
+    .navbar {
+        display: none;
+
+        flex-direction: column;
+        align-items: flex-start;
+        place-content: flex-end space-around;
+        width: 100%;
+        max-width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: -1;
+        gap: 12px;
+        padding: 12px 40px;
+        background-color: var(--secondary);
+
+        border-bottom: 2px solid #FFC632;
+
+        .navbar-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .navbar-button {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 0 40px;
+            padding-bottom: 20px;
+        }
+    }
+
+    .container {
+        max-width: 870px;
+    }
+
+    .content .home-header {
+        font-size: calc(68px * 0.72);
+    }
+
+    .content .home-small {
+        font-size: calc(28px * 0.72);
+    }
+
+    .header {
+        font-size: calc(46px * 0.72) !important;
+    }
+
+    #berita p.left {
+        font-size: calc(32px * 0.72);
+    }
+
+    #tautan-terkait .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #tautan-terkait img {
+        width: auto;
+        height: 60%;
+    }
+
+    #visi img {
+        width: 100%;
+    }
+
+    #visi .container .content {
+        gap: 32px;
+        flex-direction: column;
+    }
+
+    #visi .container .content .text {
+        text-align: center;
+        align-items: center;
+    }
+
+    #misi .container .content .main .row .col {
+        gap: 16px;
+    }
+
+    #misi .container .content .main .row .col .body {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-direction: column;
+    }
+
+    #misi .container .content .main .row .col .body p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    #misi .container .content .main .row .col .body p.number {
+        padding: 6px 19px;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    #misi .container .content .main .row {
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+        flex-direction: column;
+    }
+
+    #berita .container .content .main {
+        grid-template-columns: repeat(1, minmax(350px, 630px));
+    }
+
+    #berita .container .content .main p.left {
+        text-align: center;
+        width: auto !important;
+    }
+
+    #berita .container .content .main .right {
+        align-items: center;
+    }
+
+    #berita .container .content .main .right p.text {
+        text-align: center;
+        width: auto;
+    }
+
+    footer .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    footer .contact {
+        align-items: center;
+    }
+
+    footer .contact p,
+    footer .contact h1 {
+        text-align: center;
+    }
+
+    footer .post {
+        align-items: center;
+    }
+
+    footer .post ul {
+        align-items: center;
+        text-align: center;
+    }
+
+    footer .second-footer .container {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+
+    #tautan-terkait {
+        padding: 24px 0px;
+    }
+
+    #tautan-terkait .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #tautan-terkait img {
+        width: auto;
+        height: 50%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    footer .second-footer ul {
+        gap: 8px;
+    }
+
+    .content .home-header {
+        font-size: calc(68px * 0.62);
+    }
+
+    .content .home-small {
+        font-size: calc(28px * 0.62);
+    }
+
+    .header {
+        font-size: calc(46px * 0.62) !important;
+    }
+
+
+    #tautan-terkait .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #tautan-terkait img {
+        width: auto;
+        height: 50%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .container {
+        max-width: 425px;
+    }
+
+    #tautan-terkait {
+        padding: 12px 0px;
+    }
 }
