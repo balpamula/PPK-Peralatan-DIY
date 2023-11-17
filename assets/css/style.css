@@ -71,7 +71,6 @@ header {
 header .container {
     display: flex;
     gap: 28px;
-
 }
 
 .navbar {
@@ -1038,7 +1037,7 @@ footer .post li {
     }
 
     #berita .container .content .main {
-        grid-template-columns: repeat(1, minmax(350px, 630px));
+        grid-template-columns: repeat(1, minmax(235px, 630px));
     }
 
     #berita .container .content .main p.left {
@@ -1141,12 +1140,22 @@ footer .post li {
     }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 390px) {
     .container {
-        max-width: 425px;
+        max-width: 390px;
     }
 
     #tautan-terkait {
         padding: 12px 0px;
+    }
+
+    #berita p.left {
+        font-size: calc(32px * 0.62);
+    }
+
+
+
+    footer .main-content {
+        flex-direction: column;
     }
 }
