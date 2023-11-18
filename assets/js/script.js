@@ -9,6 +9,14 @@ menu.onclick = function () {
     }
 };
 
+window.addEventListener("resize", function () {
+    if (window.innerWidth > 870) {
+        navbarMenu.style.display = "flex";
+    } else {
+        navbarMenu.style.display = "none";
+    }
+});
+
 const menuBtn = document.getElementById("menuBtn");
 const navbarButton = document.querySelector(".navbar-button");
 
@@ -19,6 +27,16 @@ menuBtn.onclick = function () {
         navbarButton.style.display = "flex";
     }
 };
+
+window.addEventListener("resize", function () {
+    if (window.innerWidth > 1080) {
+        navbarButton.style.display = "flex";
+    } else if (window.innerWidth <= 870) {
+        navbarButton.style.display = "flex";
+    } else {
+        navbarButton.style.display = "none";
+    }
+});
 
 
 
@@ -80,8 +98,11 @@ $(document).ready(function () {
             0: {
                 items: 1
             },
-            768: {
+            425: {
                 items: 1
+            },
+            768: {
+                items: 1.82
             },
             870: {
                 items: 1.82
