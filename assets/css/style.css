@@ -369,36 +369,6 @@ h1.header {
     line-height: normal;
 }
 
-.slider-card {
-    display: flex;
-    background: white;
-    border-radius: 12px;
-    box-shadow: -1px 2px 16px 0px rgba(0, 0, 0, 0.03);
-    margin: 0 12px;
-    justify-content: center;
-    align-items: center;
-
-    transform: scale(0.9);
-    opacity: 0.5;
-    transition: all 0.3s;
-}
-
-.owl-item.active.center .slider-card {
-    transform: scale(1.1);
-    margin: 0 24px;
-    opacity: 1;
-}
-
-.owl-carousel .owl-stage {
-    height: 344px;
-    display: flex;
-    align-items: center;
-}
-
-.owl-carousel .owl-loaded .owl-drag {
-    max-width: 1440px;
-}
-
 .card {
     display: flex;
     flex-direction: column;
@@ -421,7 +391,7 @@ h1.header {
     font-weight: 500;
     line-height: 104%;
 
-    align-self: stretch;
+    align-self: start;
     word-wrap: break-word;
 }
 
@@ -456,87 +426,66 @@ h1.header {
     height: auto;
 }
 
-.owl-carousel.owl-loaded {
+.swiper {
+    max-width: calc(1440px - 80px - 80px);
+    height: 350px;
     display: flex !important;
-    flex-direction: column;
-    gap: 16px;
 }
 
-.owl-nav {
-    display: flex;
-    justify-content: end;
-    gap: 16px;
-    flex-direction: row;
-    padding: 0 30px;
+.swiper-slide {
+    transition: all .3s ease;
+    transform: scale(0.92) !important;
+    opacity: 0.7;
+
+    &.swiper-slide-active {
+        transform: scale(1) !important;
+        opacity: 1;
+        z-index: 2;
+    }
 }
 
-.owl-nav .owl-prev {
+.swiper-nav {
+    position: absolute;
+    top: 90%;
+    width: 11%;
+    left: 89%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
     display: inline-flex;
     padding: 6px 24px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    width: 50px !important;
+    height: 50px !important;
     border-radius: 50%;
     border: 3px solid #d1d1d1 !important;
     color: #d1d1d1 !important;
-
-    font-size: 30px !important;
-
-    transition: color 0.2s ease-in-out, border 0.2s ease-in-out;
-}
-
-.owl-nav .owl-prev:hover {
-    color: var(--primary) !important;
-    border: 3px solid var(--primary) !important;
-}
-
-.owl-nav .owl-next {
-    display: inline-flex;
-    padding: 6px 24px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 3px solid #d1d1d1 !important;
     color: #d1d1d1 !important;
-
     font-size: 30px !important;
     transition: color 0.2s ease-in-out, border 0.2s ease-in-out;
 }
 
-.owl-carousel .owl-item img {
-    display: block;
-    width: 100%;
-}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
 
-.owl-nav .owl-next:hover {
     color: var(--primary) !important;
     border: 3px solid var(--primary) !important;
 }
 
-.owl-dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    content: none !important;
 }
 
-.owl-dots .owl-dot {
-    height: 10px;
-    width: 10px;
-    border-radius: 10px;
-    background: #ccc !important;
-    margin-left: 3px;
-    margin-right: 3px;
-    outline: none;
-}
 
-.owl-dots .owl-dot.active {
-    background: var(--primary) !important;
-}
+/* .swiper-slide-active {
+    transform: scale(1.1) !important;
+
+    transition: all 0.3s !important;
+} */
 
 #berita {
     display: flex;
@@ -888,6 +837,16 @@ footer .post li {
 }
 
 @media screen and (max-width: 1024px) {
+    .swiper {
+        max-width: calc(1024px - 40px - 40px);
+        height: 280px;
+    }
+
+    .swiper-nav {
+        width: 15%;
+        left: 85%;
+    }
+
     .container {
         max-width: 1024px;
         padding: 0 40px;
@@ -968,7 +927,7 @@ footer .post li {
         padding: 20px 20px;
         background-color: var(--secondary);
 
-        border-bottom: 2px solid #FFC632;
+        /* border-bottom: 2px solid #FFC632; */
 
         .navbar-menu {
             display: flex;
@@ -1119,6 +1078,17 @@ footer .post li {
         padding: 0px 20px;
     }
 
+    .swiper {
+        max-width: calc(768px - 20px - 20px);
+        height: 300px;
+    }
+
+    .swiper-nav {
+        top: 90%;
+        width: 19%;
+        left: 82%;
+    }
+
     #tautan-terkait {
         padding: 24px 0px;
     }
@@ -1137,6 +1107,17 @@ footer .post li {
 }
 
 @media screen and (max-width: 645px) {
+    .swiper {
+        max-width: 325px;
+        height: 300px;
+    }
+
+    .swiper-nav {
+        top: 85%;
+        width: 42%;
+        left: 60%;
+    }
+
     #tautan-terkait .container {
         display: flex;
         flex-direction: column;

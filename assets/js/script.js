@@ -79,40 +79,69 @@ $(document).ready(function () {
     }
 });
 
-$(document).ready(function () {
-    $(".owl-carousel").owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        dots: false,
-        responsiveClass: true,
-        autoplay: false,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: true,
-        center: true,
-        navText: [
-            "<i class='fas fa-arrow-left'></i>",
-            "<i class='fas fa-arrow-right'></i>"
-        ],
-        responsive: {
-            0: {
-                items: 1
-            },
-            425: {
-                items: 1
-            },
-            768: {
-                items: 1.82
-            },
-            870: {
-                items: 1.82
-            },
-            1024: {
-                items: 2.33
-            },
-            1440: {
-                items: 3.1
-            }
-        }
-    });
+// $(document).ready(function () {
+//     $(".owl-carousel").owlCarousel({
+//         loop: true,
+//         margin: 10,
+//         nav: true,
+//         dots: false,
+//         responsiveClass: true,
+//         autoplay: false,
+//         autoplayTimeout: 3000,
+//         autoplayHoverPause: true,
+//         center: true,
+//         navText: [
+//             "<i class='fas fa-arrow-left'></i>",
+//             "<i class='fas fa-arrow-right'></i>"
+//         ],
+//         responsive: {
+//             0: {
+//                 items: 1
+//             },
+//             425: {
+//                 items: 1
+//             },
+//             768: {
+//                 items: 1.82
+//             },
+//             870: {
+//                 items: 1.82
+//             },
+//             1024: {
+//                 items: 2.33
+//             },
+//             1440: {
+//                 items: 3.1
+//             }
+//         }
+//     });
+// });
+
+const swiper = new Swiper('.swiper', {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    loop: true,
+    centeredSlides: true,
+
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    breakpoints: {
+        360: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+    },
 });
