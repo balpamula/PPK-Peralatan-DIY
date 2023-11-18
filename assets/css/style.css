@@ -665,7 +665,9 @@ h1.header {
 }
 
 #galeri img {
-    object-fit: cover;
+    /* object-fit: cover; */
+    width: 100%;
+    height: auto;
 }
 
 #galeri .row {
@@ -679,6 +681,7 @@ h1.header {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+    width: 100%;
 }
 
 #pengaduan {
@@ -912,6 +915,14 @@ footer .post li {
 
     #berita p.left {
         font-size: calc(32px * 0.92);
+    }
+
+    #galeri .row {
+        flex-direction: column;
+    }
+
+    #galeri .inside-row {
+        gap: 20px;
     }
 
     footer .second-footer .container {
