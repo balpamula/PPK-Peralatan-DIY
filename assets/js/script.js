@@ -10,7 +10,7 @@ menu.onclick = function () {
 };
 
 window.addEventListener("resize", function () {
-    if (window.innerWidth > 870) {
+    if (window.innerWidth > 880) {
         navbarMenu.style.display = "flex";
     } else {
         navbarMenu.style.display = "none";
@@ -31,7 +31,7 @@ menuBtn.onclick = function () {
 window.addEventListener("resize", function () {
     if (window.innerWidth > 1080) {
         navbarButton.style.display = "flex";
-    } else if (window.innerWidth <= 870) {
+    } else if (window.innerWidth <= 880) {
         navbarButton.style.display = "flex";
     } else {
         navbarButton.style.display = "none";
@@ -104,7 +104,7 @@ $(document).ready(function () {
 //             768: {
 //                 items: 1.82
 //             },
-//             870: {
+//             880: {
 //                 items: 1.82
 //             },
 //             1024: {
@@ -137,10 +137,25 @@ const swiper = new Swiper('.swiper', {
         360: {
           slidesPerView: 1,
         },
+        480: {
+          slidesPerView: 1,
+        },
+        645: {
+          slidesPerView: 2,
+        },
         768: {
           slidesPerView: 2,
         },
+        768: {
+          slidesPerView: 2,
+        },
+        880: {
+          slidesPerView: 2,
+        },
         1024: {
+          slidesPerView: 3,
+        },
+        1440: {
           slidesPerView: 3,
         },
     },
