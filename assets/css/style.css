@@ -1155,14 +1155,14 @@ footer .post li {
 
 @media screen and (max-width: 736px) {
     .swiper {
-        max-width: 700px;
+        max-width: 660px;
         height: 300px;
     }
 
     .swiper-nav {
-        top: 89%;
-        width: 20%;
-        left: 81%;
+        top: 85%;
+        width: 21%;
+        left: 80%;
     }
 }
 
