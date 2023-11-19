@@ -177,7 +177,6 @@ header .container {
 
 .content {
     display: flex;
-    padding: 40px 0;
     gap: 32px;
     flex-direction: column;
 }
@@ -233,7 +232,7 @@ h1.header {
     gap: 84px;
     flex-direction: row;
     align-items: center;
-    padding-top: 80px;
+    margin-top: 80px;
 }
 
 #visi .text {
@@ -263,6 +262,7 @@ h1.header {
     align-items: center;
     gap: 24px;
     flex-direction: column;
+    margin-top: 80px;
 }
 
 #misi .main {
@@ -340,6 +340,10 @@ h1.header {
     justify-content: center;
 }
 
+#struktur .content {
+    margin-top: 80px;
+}
+
 #struktur h1.header {
     color: #000;
     font-style: normal;
@@ -360,6 +364,7 @@ h1.header {
     justify-content: center;
     gap: 8px;
     flex-direction: column;
+    margin-top: 80px;
 }
 
 #kegiatan h1.header {
@@ -500,6 +505,7 @@ h1.header {
     align-items: center;
     gap: 24px;
     flex-direction: column;
+    margin-top: 80px;
 }
 
 #berita h1.header {
@@ -597,6 +603,10 @@ h1.header {
     justify-content: center;
 }
 
+#galeri .content {
+    margin-top: 80px;
+}
+
 #galeri h1.header {
     color: #000;
     font-style: normal;
@@ -639,12 +649,12 @@ h1.header {
 }
 
 #pengaduan .container {
-    margin: 40px 0px;
     width: 1440px;
     justify-content: center;
     background-image: url("../img/CTA.png");
     background-position: center;
     background-repeat: no-repeat;
+    margin-top: 80px;
     /* background-color: #2C2B2B; */
 }
 
@@ -688,7 +698,11 @@ h1.header {
 }
 
 footer {
-    margin-top: 40px;
+    margin-top: 80px;
+}
+
+footer .content {
+    padding: 40px 0;
 }
 
 footer .footer {

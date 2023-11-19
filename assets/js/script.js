@@ -38,7 +38,24 @@ window.addEventListener("resize", function () {
     }
 });
 
+document.querySelectorAll('.navbar-menu a').forEach(function (item) {
+    item.addEventListener('click', function () {
+        if (window.innerWidth <= 880) {
+            navbarMenu.style.display = "none";
+        }
+    });
+});
 
+
+// Tambahkan event listeners untuk navbar buttons
+document.querySelectorAll('.navbar-button a').forEach(function (button) {
+    button.addEventListener('click', function () {
+        if (window.innerWidth <= 1080) {
+            navbarButton.style.display = "none";
+            navbarMenu.style.display = "none";
+        }
+    });
+});
 
 $(document).ready(function () {
     var header = $("header");
@@ -135,6 +152,9 @@ const swiper = new Swiper('.swiper', {
 
     breakpoints: {
         360: {
+          slidesPerView: 1,
+        },
+        375: {
           slidesPerView: 1,
         },
         480: {
