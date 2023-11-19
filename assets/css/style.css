@@ -427,7 +427,7 @@ h1.header {
 }
 
 .swiper {
-    max-width: calc(1440px - 80px - 80px);
+    max-width: calc(1440px - 160px);
     height: 350px;
     display: flex !important;
 }
@@ -803,40 +803,7 @@ footer .post li {
     list-style: none;
 }
 
-@media screen and (max-width: 1080px) {
-    .navbar-hamburger-button {
-        display: inline-block;
-    }
-
-    #menuBtn {
-        color: var(--primary);
-    }
-
-    .navbar {
-        justify-content: end;
-        gap: 32px;
-    }
-
-    .navbar-button {
-        display: none;
-
-        flex-direction: column;
-        align-items: flex-end;
-        place-content: flex-end space-around;
-        width: 100%;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: -1;
-        gap: 12px;
-        padding: 12px 80px;
-        background-color: var(--secondary);
-
-        border-bottom: 2px solid #FFC632;
-    }
-}
-
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1366px) {
     .swiper {
         max-width: calc(1024px - 40px - 40px);
         height: 280px;
@@ -847,338 +814,407 @@ footer .post li {
         left: 85%;
     }
 
-    .container {
-        max-width: 1024px;
-        padding: 0 40px;
-    }
+    @media screen and (max-width: 1080px) {
+        .navbar-hamburger-button {
+            display: inline-block;
+        }
 
-    .content .home-header {
-        font-size: calc(68px * 0.86);
-    }
+        #menuBtn {
+            color: var(--primary);
+        }
 
-    .content .home-small {
-        font-size: calc(28px * 0.86);
-    }
-
-    .header {
-        font-size: calc(46px * 0.86) !important;
-    }
-
-    .navbar-button {
-        padding: 12px 40px;
-    }
-
-    #visi img {
-        max-width: 447px;
-    }
-
-    #berita p.left {
-        font-size: calc(32px * 0.92);
-    }
-
-    #galeri .row {
-        flex-direction: column;
-    }
-
-    #galeri .inside-row {
-        gap: 20px;
-    }
-
-    footer .second-footer .container {
-        padding: 10px 40px;
-    }
-}
-
-@media screen and (max-width: 870px) {
-    header {
-        background-color: var(--secondary);
-    }
-
-    #top .container .content {
-        padding: 180px 0;
-    }
-
-    .navbar-hamburger {
-        display: inline-block;
-    }
-
-    #menu {
-        display: inline-block;
-        color: var(--primary);
-    }
-
-    .navbar-hamburger-button {
-        display: none;
-    }
-
-    .navbar {
-        display: none;
-
-        flex-direction: column;
-        align-items: flex-start;
-        place-content: flex-end space-around;
-        width: 100%;
-        max-width: 100%;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: -1;
-        gap: 12px;
-        padding: 20px 20px;
-        background-color: var(--secondary);
-
-        /* border-bottom: 2px solid #FFC632; */
-
-        .navbar-menu {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+        .navbar {
+            justify-content: end;
+            gap: 32px;
         }
 
         .navbar-button {
-            display: flex;
+            display: none;
+
             flex-direction: column;
-            align-items: flex-start;
-            gap: 20px;
-            padding: 0 20px;
-            padding-bottom: 20px;
+            align-items: flex-end;
+            place-content: flex-end space-around;
+            width: 100%;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: -1;
+            gap: 12px;
+            padding: 12px 80px;
+            background-color: var(--secondary);
+
+            border-bottom: 2px solid #FFC632;
         }
     }
 
-    .container {
-        max-width: 870px;
+    @media screen and (max-width: 1024px) {
+        .swiper {
+            max-width: calc(870px - 80px);
+            height: 280px;
+        }
+
+        .swiper-nav {
+            width: 15%;
+            left: 85%;
+        }
+
+        .container {
+            max-width: 1024px;
+            padding: 0 40px;
+        }
+
+        .content .home-header {
+            font-size: calc(68px * 0.86);
+        }
+
+        .content .home-small {
+            font-size: calc(28px * 0.86);
+        }
+
+        .header {
+            font-size: calc(46px * 0.86) !important;
+        }
+
+        .navbar-button {
+            padding: 12px 40px;
+        }
+
+        #visi img {
+            max-width: 447px;
+        }
+
+        #berita p.left {
+            font-size: calc(32px * 0.92);
+        }
+
+        #galeri .row {
+            flex-direction: column;
+        }
+
+        #galeri .inside-row {
+            gap: 20px;
+        }
+
+        footer .second-footer .container {
+            padding: 10px 40px;
+        }
     }
 
-    .content .home-header {
-        font-size: calc(68px * 0.72);
+    @media screen and (max-width: 870px) {
+        header {
+            background-color: var(--secondary);
+        }
+
+        .swiper {
+            max-width: calc(768px - 40px);
+            height: 350px;
+            display: flex !important;
+        }
+
+        .swiper-nav {
+            width: 18%;
+            left: 83%;
+        }
+
+        #top .container .content {
+            padding: 180px 0;
+        }
+
+        .navbar-hamburger {
+            display: inline-block;
+        }
+
+        #menu {
+            display: inline-block;
+            color: var(--primary);
+        }
+
+        .navbar-hamburger-button {
+            display: none;
+        }
+
+        .navbar {
+            display: none;
+
+            flex-direction: column;
+            align-items: flex-start;
+            place-content: flex-end space-around;
+            width: 100%;
+            max-width: 100%;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: -1;
+            gap: 12px;
+            padding: 20px 20px;
+            background-color: var(--secondary);
+
+            /* border-bottom: 2px solid #FFC632; */
+
+            .navbar-menu {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .navbar-button {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+                padding: 0 20px;
+                padding-bottom: 20px;
+            }
+        }
+
+        .container {
+            max-width: 870px;
+        }
+
+        .content .home-header {
+            font-size: calc(68px * 0.72);
+        }
+
+        .content .home-small {
+            font-size: calc(28px * 0.72);
+        }
+
+        .header {
+            font-size: calc(46px * 0.72) !important;
+        }
+
+        #berita p.left {
+            font-size: calc(32px * 0.72);
+        }
+
+        #tautan-terkait .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #tautan-terkait img {
+            width: auto;
+            height: 90%;
+        }
+
+        #visi img {
+            width: 100%;
+        }
+
+        #visi .container .content {
+            gap: 32px;
+            flex-direction: column;
+        }
+
+        #visi .container .content .text {
+            text-align: center;
+            align-items: center;
+        }
+
+        #misi .container .content .main .row .col {
+            gap: 16px;
+        }
+
+        #misi .container .content .main .row .col .body {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-direction: column;
+        }
+
+        #misi .container .content .main .row .col .body p {
+            font-size: 16px;
+            text-align: center;
+        }
+
+        #misi .container .content .main .row .col .body p.number {
+            padding: 6px 19px;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+        }
+
+        #misi .container .content .main .row {
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+            flex-direction: column;
+        }
+
+        #berita .container .content .main {
+            grid-template-columns: repeat(1, minmax(235px, 630px));
+        }
+
+        #berita .container .content .main p.left {
+            text-align: center;
+            width: auto !important;
+        }
+
+        #berita .container .content .main .right {
+            align-items: center;
+        }
+
+        #berita .container .content .main .right p.text {
+            text-align: center;
+            width: auto;
+        }
+
+        footer .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            align-content: center;
+            flex-wrap: wrap;
+        }
+
+        footer .contact {
+            align-items: center;
+        }
+
+        footer .contact p,
+        footer .contact h1 {
+            text-align: center;
+        }
+
+        footer .post {
+            align-items: center;
+        }
+
+        footer .post ul {
+            align-items: center;
+            text-align: center;
+        }
+
+        footer .second-footer .container {
+            flex-direction: column;
+            gap: 16px;
+        }
     }
 
-    .content .home-small {
-        font-size: calc(28px * 0.72);
+    @media screen and (max-width: 845px) {
+        .swiper {
+            max-width: calc(768px - 40px);
+            height: 300px;
+        }
+
+        .swiper-nav {
+            top: 90%;
+            width: 19%;
+            left: 82%;
+        }
     }
 
-    .header {
-        font-size: calc(46px * 0.72) !important;
+    @media screen and (max-width: 768px) {
+        .container {
+            max-width: 768px;
+            padding: 0px 20px;
+        }
+
+        .swiper {
+            max-width: calc(768px - 20px - 20px);
+            height: 300px;
+        }
+
+        .swiper-nav {
+            top: 90%;
+            width: 19%;
+            left: 82%;
+        }
+
+        #tautan-terkait {
+            padding: 24px 0px;
+        }
+
+        #tautan-terkait .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #tautan-terkait img {
+            width: auto;
+            height: 80%;
+        }
     }
 
-    #berita p.left {
-        font-size: calc(32px * 0.72);
+    @media screen and (max-width: 645px) {
+        .swiper {
+            max-width: 325px;
+            height: 300px;
+        }
+
+        .swiper-nav {
+            top: 85%;
+            width: 42%;
+            left: 60%;
+        }
+
+        #tautan-terkait .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
     }
 
-    #tautan-terkait .container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+    @media screen and (max-width: 480px) {
+        #top .container .content {
+            padding: 140px 0;
+        }
+
+        footer .second-footer ul {
+            gap: 8px;
+        }
+
+        .content .home-header {
+            font-size: calc(68px * 0.62);
+        }
+
+        .content .home-small {
+            font-size: calc(28px * 0.62);
+        }
+
+        .header {
+            font-size: calc(46px * 0.62) !important;
+        }
+
+
+        #tautan-terkait .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #tautan-terkait img {
+            width: auto;
+            height: 50%;
+        }
     }
 
-    #tautan-terkait img {
-        width: auto;
-        height: 90%;
-    }
+    @media screen and (max-width: 390px) {
+        .container {
+            max-width: 390px;
+        }
 
-    #visi img {
-        width: 100%;
-    }
+        .content .home-header {
+            font-size: calc(68px * 0.58);
+        }
 
-    #visi .container .content {
-        gap: 32px;
-        flex-direction: column;
-    }
+        .content .home-small {
+            font-size: calc(28px * 0.58);
+        }
 
-    #visi .container .content .text {
-        text-align: center;
-        align-items: center;
-    }
+        #berita p.left {
+            font-size: calc(32px * 0.62);
+        }
 
-    #misi .container .content .main .row .col {
-        gap: 16px;
-    }
-
-    #misi .container .content .main .row .col .body {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        flex-direction: column;
-    }
-
-    #misi .container .content .main .row .col .body p {
-        font-size: 16px;
-        text-align: center;
-    }
-
-    #misi .container .content .main .row .col .body p.number {
-        padding: 6px 19px;
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-    }
-
-    #misi .container .content .main .row {
-        display: flex;
-        align-items: flex-start;
-        gap: 24px;
-        flex-direction: column;
-    }
-
-    #berita .container .content .main {
-        grid-template-columns: repeat(1, minmax(235px, 630px));
-    }
-
-    #berita .container .content .main p.left {
-        text-align: center;
-        width: auto !important;
-    }
-
-    #berita .container .content .main .right {
-        align-items: center;
-    }
-
-    #berita .container .content .main .right p.text {
-        text-align: center;
-        width: auto;
-    }
-
-    footer .content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        align-content: center;
-        flex-wrap: wrap;
-    }
-
-    footer .contact {
-        align-items: center;
-    }
-
-    footer .contact p,
-    footer .contact h1 {
-        text-align: center;
-    }
-
-    footer .post {
-        align-items: center;
-    }
-
-    footer .post ul {
-        align-items: center;
-        text-align: center;
-    }
-
-    footer .second-footer .container {
-        flex-direction: column;
-        gap: 16px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .container {
-        max-width: 768px;
-        padding: 0px 20px;
-    }
-
-    .swiper {
-        max-width: calc(768px - 20px - 20px);
-        height: 300px;
-    }
-
-    .swiper-nav {
-        top: 90%;
-        width: 19%;
-        left: 82%;
-    }
-
-    #tautan-terkait {
-        padding: 24px 0px;
-    }
-
-    #tautan-terkait .container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    #tautan-terkait img {
-        width: auto;
-        height: 80%;
-    }
-}
-
-@media screen and (max-width: 645px) {
-    .swiper {
-        max-width: 325px;
-        height: 300px;
-    }
-
-    .swiper-nav {
-        top: 85%;
-        width: 42%;
-        left: 60%;
-    }
-
-    #tautan-terkait .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    #top .container .content {
-        padding: 140px 0;
-    }
-
-    footer .second-footer ul {
-        gap: 8px;
-    }
-
-    .content .home-header {
-        font-size: calc(68px * 0.62);
-    }
-
-    .content .home-small {
-        font-size: calc(28px * 0.62);
-    }
-
-    .header {
-        font-size: calc(46px * 0.62) !important;
-    }
-
-
-    #tautan-terkait .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    #tautan-terkait img {
-        width: auto;
-        height: 50%;
-    }
-}
-
-@media screen and (max-width: 390px) {
-    .container {
-        max-width: 390px;
-    }
-
-    .content .home-header {
-        font-size: calc(68px * 0.58);
-    }
-
-    .content .home-small {
-        font-size: calc(28px * 0.58);
-    }
-
-    #berita p.left {
-        font-size: calc(32px * 0.62);
-    }
-
-    footer .main-content {
-        flex-direction: column;
+        footer .main-content {
+            flex-direction: column;
+        }
     }
 }
