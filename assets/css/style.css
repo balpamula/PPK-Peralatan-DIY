@@ -50,7 +50,7 @@ header {
     left: 0;
     right: 0;
     z-index: 9999;
-    border-bottom: 1px solid #FFC632;
+    border-bottom: 2px solid #FFC632;
     background: transparent;
     padding: 8px 0;
     transition: background 0.3s ease-in-out;
@@ -387,6 +387,7 @@ h1.header {
     cursor: pointer;
 
     overflow-wrap: break-word;
+    box-shadow: -1px 2px 16px 0px rgba(0, 0, 0, 0.07);
 }
 
 .card .card-title {
@@ -485,13 +486,6 @@ h1.header {
     content: none !important;
 }
 
-
-/* .swiper-slide-active {
-    transform: scale(1.1) !important;
-
-    transition: all 0.3s !important;
-} */
-
 #berita {
     display: flex;
 }
@@ -584,7 +578,7 @@ h1.header {
     margin: 0 0;
     cursor: pointer;
 
-    box-shadow: -1px 2px 16px 0px rgba(0, 0, 0, 0.03);
+    box-shadow: -1px 2px 16px 0px rgba(0, 0, 0, 0.07);
 }
 
 #berita .card img {
@@ -1265,5 +1259,220 @@ footer .post li {
 
     footer .main-content {
         flex-direction: column;
+    }
+}
+
+.bg-secondary {
+    background-color: #01037C;
+}
+
+.berita {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+#detailBerita .container {
+    margin-top: 120px;
+}
+
+.berita a {
+    font-size: 32px;
+    text-decoration: none;
+    color: #000;
+}
+
+.berita-image {
+    width: 100%;
+    height: auto;
+}
+
+.berita-header {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+}
+
+.berita-header hr {
+    height: 2px;
+    width: 100%;
+    background: var(--primary);
+    border: none;
+}
+
+.berita-info hr {
+    height: 16px;
+    width: 1px;
+    background: #000;
+    border: none;
+}
+
+.berita-title-section {
+    display: flex;
+    gap: 42px;
+    align-items: center;
+}
+
+.berita-title {
+    color: #000;
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    max-width: 1135px;
+}
+
+.berita-info {
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+
+
+    color: #767171;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.berita-info .penulis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.berita-info .tanggal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.berita-info .penonton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.berita-body .lokasi {
+    color: #000;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.berita-body p {
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    /* Each item takes up 100% of the container */
+}
+
+.indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    gap: 4px;
+}
+
+.indicator {
+    width: 24px;
+    height: 8px;
+    background-color: #aaa;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.indicator.active {
+    background-color: var(--primary);
+}
+
+.back-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .berita-title {
+        font-size: 24px;
+
+        max-width: 820px;
+    }
+
+    .berita-info {
+        gap: 32px;
+    }
+
+    .berita-body p {
+        font-size: 16px;
+    }
+
+    .indicator {
+        width: 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #detailBerita .container {
+        margin-top: 80px;
+    }
+
+    .back {
+        display: none !important;
+    }
+
+    .back-mobile {
+        display: block;
+    }
+
+    .berita-title {
+        text-align: start;
+    }
+
+    .berita-info {
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+
+    .berita-title-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .berita-title-section a {
+        display: flex;
+        font-size: 16px;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .berita-title-section i {
+        font-size: 12px;
     }
 }
