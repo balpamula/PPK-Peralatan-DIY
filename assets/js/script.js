@@ -57,7 +57,10 @@ document.querySelectorAll(".navbar-button a").forEach(function (button) {
 
 $(document).ready(function () {
   // Check if the current page is not berita.html
-  if (!window.location.pathname.includes("berita.html")) {
+  if (
+    !window.location.pathname.includes("berita.html") ||
+    !window.location.pathname.includes("berita")
+  ) {
     var header = $("header");
     var button = $(".navbar-button .button");
 
