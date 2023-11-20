@@ -56,49 +56,44 @@ document.querySelectorAll(".navbar-button a").forEach(function (button) {
 });
 
 $(document).ready(function () {
-  // Check if the current page is not berita.html
-  if (
-    !window.location.pathname.includes("berita.html") ||
-    !window.location.pathname.includes("berita")
-  ) {
-    var header = $("header");
-    var button = $(".navbar-button .button");
-
-    checkHeaderBackground();
-
-    $(window).scroll(function () {
-      checkHeaderBackground();
-    });
-
-    $(window).resize(function () {
-      checkHeaderBackground();
-    });
-
-    function checkHeaderBackground() {
-      if ($(window).scrollTop() > 0) {
-        header.css({
-          background: "#01037C",
-          "border-bottom": "2px solid #FFC632",
+    // Check if the current page is not berita.html or contains "berita"
+    if (!window.location.pathname.includes("berita.html") && !window.location.pathname.includes("berita")) {
+        var header = $("header");
+        var button = $(".navbar-button .button");
+    
+        // Call the function to check header background
+        checkHeaderBackground();
+    
+        // Combine scroll and resize event handlers
+        $(window).on('scroll resize', function () {
+            checkHeaderBackground();
         });
-        button.addClass("scrolled");
-      } else {
-        if ($(window).width() > 1080) {
-          header.css({
-            background: "transparent",
-            "border-bottom": "2px solid #FFC632",
-          });
-          button.removeClass("scrolled");
-        } else {
-          header.css({
-            background: "#01037C",
-            "border-bottom": "2px solid #FFC632",
-          });
-          button.addClass("scrolled");
+    
+        function checkHeaderBackground() {
+            if ($(window).scrollTop() > 0) {
+                header.css({
+                    background: "#01037C",
+                    "border-bottom": "2px solid #FFC632",
+                });
+                button.addClass("scrolled");
+            } else {
+                if ($(window).width() > 1080) {
+                        header.css({
+                            background: "transparent",
+                            "border-bottom": "2px solid #FFC632",
+                        });
+                    button.removeClass("scrolled");
+                } else {
+                    header.css({
+                        background: "#01037C",
+                        "border-bottom": "2px solid #FFC632",
+                    });
+                    button.addClass("scrolled");
+                }
+            }
         }
-      }
     }
-  }
-});
+});  
 
 const swiper = new Swiper(".swiper", {
   slidesPerView: 3,
