@@ -215,6 +215,12 @@ header .container {
 
     border-radius: 4px;
     background: var(--primary);
+    transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+    color: var(--primary);
+    background: #01037C;
 }
 
 h1.header {
@@ -556,6 +562,10 @@ h1.header {
     line-height: normal;
 }
 
+#berita .right .button:hover {
+    color: var(--primary);
+}
+
 #berita .main-content {
     width: 100%;
     display: grid;
@@ -689,6 +699,10 @@ h1.header {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+}
+
+#pengaduan .button:hover {
+    color: var(--primary);
 }
 
 footer {
