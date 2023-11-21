@@ -76,7 +76,7 @@ header .container {
 .navbar {
     display: flex;
     flex: 1 0 0;
-    max-width: 834px;
+    max-width: 867px;
     justify-content: space-between;
     align-items: center;
 }
@@ -1396,7 +1396,7 @@ footer .post li {
     display: flex;
     justify-content: center;
     margin-top: 8px;
-    gap: 4px;
+    gap: 6px;
 }
 
 .indicator {
@@ -1474,5 +1474,281 @@ footer .post li {
 
     .berita-title-section i {
         font-size: 12px;
+    }
+}
+
+#halamanPengaduan .container {
+    margin-top: 80px;
+    justify-content: center;
+    flex-direction: column;
+    gap: 24px;
+}
+
+#halamanPengaduan h1.header {
+    color: #242222;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#halamanPengaduan a {
+    font-size: 32px;
+    text-decoration: none;
+    color: #000;
+}
+
+.form-pengaduan {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.pengaduan {
+    display: flex;
+    padding: 32px;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+
+    background: #F9C84B;
+}
+
+.pengaduan form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+}
+
+.pengaduan-header {
+    display: flex;
+    padding: 12px 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    background: #2C2B2B;
+}
+
+.pengaduan-header h1 {
+    color: #FFF;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.klarifikasi-laproan {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex: 1 0 0;
+
+    color: #FFF;
+}
+
+.pengaduan-header hr {
+    width: 100%;
+}
+
+.radio-klarifikasi-laporan {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.radio-klarifikasi-laporan input[type="radio"] {
+    appearance: none;
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #FFC632;
+    border-radius: 50%;
+
+    display: grid;
+    place-content: center;
+}
+
+.radio-klarifikasi-laporan input[type="radio"]::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: 120ms background-color ease-in-out;
+}
+
+.radio-klarifikasi-laporan input[type="radio"]:checked::before {
+    background-color: #3678F9;
+}
+
+input[type="text"] {
+    width: 100%;
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 4px;
+
+    color: #5E6366;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+textarea {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    border: none;
+    border-radius: 4px;
+
+    color: #5E6366;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.pengirim {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.radio-pengirim {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #2C2B2B;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.radio-pengirim input[type="radio"] {
+    appearance: none;
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+
+    display: grid;
+    place-content: center;
+}
+
+.radio-pengirim input[type="radio"]::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: 120ms background-color ease-in-out;
+}
+
+.radio-pengirim input[type="radio"]:checked::before {
+    background-color: #3678F9;
+}
+
+form .button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 8px 16px;
+    color: white;
+    background: var(--secondary);
+    border: 2px solid var(--secondary);
+    border-radius: 4px;
+
+
+    font-size: 16px;
+    font-weight: 600;
+
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+form .button:hover {
+    color: var(--secondary);
+    background: transparent;
+    border: 2px solid var(--secondary);
+}
+
+.back-pengaduan {
+    display: none;
+}
+
+@media screen and (max-width: 880px) {
+    .back-pengaduan {
+        display: block;
+    }
+
+    #halamanPengaduan a {
+        font-size: 24px;
+        text-decoration: none;
+        color: #000;
+    }
+
+    .pengaduan {
+        width: 100%;
+    }
+
+    .pengaduan-header {
+        width: 100%;
+    }
+
+    .pengaduan form {
+        gap: 24px;
+        width: 100%;
+    }
+
+    .form-pengaduan {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .pengaduan-header {
+        align-items: flex-start;
+    }
+
+    .klarifikasi-laproan {
+        align-items: flex-start;
+        gap: 8px;
+        flex: 1 0 0;
+        flex-direction: column;
+    }
+
+    .radio-klarifikasi-laporan {
+        font-size: 16px;
+    }
+
+    .pengirim {
+        align-items: flex-start;
+        gap: 8px;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .pengaduan form {
+        gap: 16px;
     }
 }
