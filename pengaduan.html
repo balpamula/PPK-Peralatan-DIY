@@ -74,10 +74,18 @@
                                 </div>
                             </div>
                         </div>
-                        <input type="text" placeholder="Isikan Judul Laporan Anda*" name="judul">
-                        <textarea placeholder="Isikan Laporan Anda*" rows="6" name="isiLaporan"></textarea>
-                        <!-- <input type="date" name="tanggal"> -->
-                        <input type="text" placeholder="Isikan Daerah Asal Pelapor*" name="daerah">
+                        <div class="form-group">
+                            <label class="required">Judul Laporan</label>
+                            <input type="text" placeholder="Isikan Judul Laporan Anda" name="judul" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="required">Isi Laporan</label>
+                            <textarea placeholder="Isikan Laporan Anda" rows="6" name="isiLaporan" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="required">Daerah Asal Pelapor</label>
+                            <input type="text" placeholder="Isikan Daerah Asal Pelapor" name="daerah" required>
+                        </div>
                         <div class="pengirim">
                             <div class="radio-pengirim">
                                 <input type="radio" id="anonim" name="pengirim" value="anonim">
