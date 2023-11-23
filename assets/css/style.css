@@ -826,6 +826,10 @@ footer .post li {
 }
 
 @media screen and (max-width: 1366px) {
+    .container {
+        max-width: 1366px;
+    }
+
     .swiper {
         max-width: calc(1280px - 80px);
         height: 335px;
@@ -838,19 +842,23 @@ footer .post li {
 }
 
 @media screen and (max-width: 1080px) {
+    .container {
+        max-width: 1080px;
+    }
+
     .navbar-hamburger-button {
         display: inline-block;
     }
 
     .swiper {
-        max-width: calc(1080px - 80px);
+        max-width: 920px;
         height: 300px;
     }
 
     .swiper-nav {
         top: 88%;
-        width: 14%;
-        left: 86%;
+        width: 15%;
+        left: 85%;
     }
 
     #menuBtn {
