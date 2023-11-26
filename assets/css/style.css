@@ -263,6 +263,35 @@ h1.header {
     line-height: normal;
 }
 
+#tentang .content {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+
+#tentang .main-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 93px;
+}
+
+#tentang .header {
+    color: #000;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#tentang p {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}
+
 #misi .content {
     display: flex;
     align-items: center;
@@ -320,6 +349,81 @@ h1.header {
 }
 
 #misi p.number {
+    display: inline-flex;
+    padding: 6px 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #000;
+
+    color: #000;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#tugas .content {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+#tugas .main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+#tugas hr {
+    height: 1px;
+    width: 100%;
+    background: #8F8686;
+}
+
+#tugas p.header {
+    color: #000;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#tugas .row {
+    display: flex;
+    align-items: flex-start;
+    gap: 66px;
+    align-self: stretch;
+}
+
+#tugas .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+#tugas .body {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+#tugas p {
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#tugas p.number {
     display: inline-flex;
     padding: 6px 24px;
     flex-direction: column;
@@ -925,6 +1029,10 @@ footer .post li {
         max-width: 447px;
     }
 
+    #tentang img {
+        max-width: 476px;
+    }
+
     #berita p.left {
         font-size: calc(32px * 0.92);
     }
@@ -1055,6 +1163,20 @@ footer .post li {
         align-items: center;
     }
 
+    #tentang img {
+        width: 100%;
+    }
+
+    #tentang .main-content {
+        gap: 32px;
+        flex-direction: column;
+    }
+
+    #tentang p {
+        text-align: center;
+        align-items: center;
+    }
+
     #misi .container .content .main .row .col {
         gap: 16px;
     }
@@ -1079,6 +1201,36 @@ footer .post li {
     }
 
     #misi .container .content .main .row {
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+        flex-direction: column;
+    }
+
+    #tugas .container .content .main .row .col {
+        gap: 16px;
+    }
+
+    #tugas .container .content .main .row .col .body {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-direction: column;
+    }
+
+    #tugas .container .content .main .row .col .body p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    #tugas .container .content .main .row .col .body p.number {
+        padding: 6px 19px;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    #tugas .container .content .main .row {
         display: flex;
         align-items: flex-start;
         gap: 24px;
