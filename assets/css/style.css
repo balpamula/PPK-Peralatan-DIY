@@ -322,10 +322,24 @@ h1.header {
 }
 
 #misi .row {
-    display: flex;
+    display: none;
     align-items: flex-end;
     gap: 66px;
     align-self: stretch;
+}
+
+#misi .col-desktop {
+    display: flex;
+    align-items: center;
+    gap: 66px;
+    align-self: stretch;
+}
+
+#misi .row-desktop {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
 }
 
 #misi .col {
@@ -399,10 +413,24 @@ h1.header {
 }
 
 #tugas .row {
-    display: flex;
+    display: none;
     align-items: flex-start;
     gap: 66px;
     align-self: stretch;
+}
+
+#tugas .col-desktop {
+    display: flex;
+    align-items: center;
+    gap: 66px;
+    align-self: stretch;
+}
+
+#tugas .row-desktop {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
 }
 
 #tugas .col {
@@ -1212,6 +1240,10 @@ footer .post li {
         flex-direction: column;
     }
 
+    #misi .row-desktop {
+        display: none;
+    }
+
     #tugas .col {
         gap: 16px;
         align-items: center
@@ -1241,6 +1273,13 @@ footer .post li {
         align-items: center;
         gap: 24px;
         flex-direction: column;
+    }
+
+    #tugas .row-desktop {
+        display: none;
+        align-items: flex-end;
+        gap: 66px;
+        align-self: stretch;
     }
 
     #berita .container .content .main {
