@@ -298,6 +298,7 @@ h1.header {
     gap: 24px;
     flex-direction: column;
     margin-top: 80px;
+    width: 100%;
 }
 
 #misi .main {
@@ -322,7 +323,7 @@ h1.header {
 
 #misi .row {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     gap: 66px;
     align-self: stretch;
 }
@@ -332,11 +333,12 @@ h1.header {
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
+    width: 100%;
 }
 
 #misi .body {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 16px;
 }
 
@@ -373,6 +375,7 @@ h1.header {
     gap: 24px;
     flex-direction: column;
     margin-top: 80px;
+    width: 100%;
 }
 
 #tugas .main {
@@ -407,11 +410,12 @@ h1.header {
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
+    width: 100%;
 }
 
 #tugas .body {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 16px;
 }
 
@@ -1177,62 +1181,64 @@ footer .post li {
         align-items: center;
     }
 
-    #misi .container .content .main .row .col {
+    #misi .col {
         gap: 16px;
+        align-items: center;
     }
 
-    #misi .container .content .main .row .col .body {
+    #misi .body {
         display: flex;
         align-items: center;
         gap: 8px;
         flex-direction: column;
     }
 
-    #misi .container .content .main .row .col .body p {
+    #misi .body p {
         font-size: 16px;
         text-align: center;
     }
 
-    #misi .container .content .main .row .col .body p.number {
+    #misi .body p.number {
         padding: 6px 19px;
         width: 40px;
         height: 40px;
         font-size: 20px;
     }
 
-    #misi .container .content .main .row {
+    #misi .row {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         gap: 24px;
         flex-direction: column;
     }
 
-    #tugas .container .content .main .row .col {
+    #tugas .col {
         gap: 16px;
+        align-items: center
     }
 
-    #tugas .container .content .main .row .col .body {
+    #tugas .body {
         display: flex;
         align-items: center;
         gap: 8px;
         flex-direction: column;
     }
 
-    #tugas .container .content .main .row .col .body p {
+    #tugas .body p {
         font-size: 16px;
         text-align: center;
     }
 
-    #tugas .container .content .main .row .col .body p.number {
+    #tugas .body p.number {
         padding: 6px 19px;
         width: 40px;
         height: 40px;
         font-size: 20px;
     }
 
-    #tugas .container .content .main .row {
+    #tugas .row {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         gap: 24px;
         flex-direction: column;
     }
